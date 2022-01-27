@@ -32,7 +32,7 @@ then rm -rf intouch_api/csharp_client/c#
   -l csharp\
   -DtargetFramework=v$Version \
   -o intouch_api/csharp_client/c#
-  tar cvzf intouch_api/csharp_client/c#swagger_sdK_$BUILD_NUMBER.tar.gz -C ./intouch_api/csharp_client/c#/ .
+  tar cvzf intouch_api/csharp_client/c#_swagger_sdK_$BUILD_NUMBER.tar.gz -C ./intouch_api/csharp_client/c#/ .
   fpm -f -s "dir" -t "deb" -a "all" -n "c#-swagger-sdk" -v $BUILD_NUMBER -C ./intouch_api/csharp_client --deb-no-default-config-files  csharp="/usr/share/c#/capillary-libs/swagger-sdk"
 elif [ "$Client" = "php" ]
 then rm -rf intouch_api/php_client/php
